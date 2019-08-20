@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="rating.css"/>
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font-family: 'Arvo', serif;
+  }
+
+  h2 {text-align: center; }
+  h2 {font-family: 'Beth Ellen', cursive;}
+  h2{font-size: 35px}
+
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    background-color:#E0EEFB
+  }
+
+  .card {
+    box-shadow: 0 4px 9px 0 rgba(0,0,0,0.2);
+  }
+
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  </style>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Arvo|Beth+Ellen&display=swap" rel="stylesheet">
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        var x = $("form").serializeArray();
+        $.each(x, function(i, field){
+            $("#results").append(field.name + ":" + field.value + " ");
+        });
+    });
+});
+</script>
+</head>
+<body>
+<body background = "city.jpg">
+
+
+
+
+
+
+
+
+
+
+
+<h2>Reviews</h2>
+  <div class="card">
+    <div class = "container">
+      <form action="/action_page.php">
+      <div class="row">
+        <div class="col-25">
+  <label for="fname">First Name</label>
+</div>
+<div class="col-75">
+  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+</div>
+</div>
+<div class="row">
+<div class="col-25">
+  <label for="lname">Last Name</label>
+</div>
+<div class="col-75">
+  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+</div>
+</div>
+<div class="row">
+<div class="col-25">
+  <label for="country">Country Visited</label>
+</div>
+<div class="col-75">
+  <select id="country" name="country">
+    <option value="select">Select Country</option>
+    <option value="australia">Australia</option>
+    <option value="canada">Canada</option>
+    <option value="usa">United States</option>
+    <option value="china">China</option>
+    <option value="egpyt">Egypt</option>
+    <option value="mexico">Mexico</option>
+    <option value="france">France</option>
+    <option value="germany">Germany</option>
+    <option value="india">India</option>
+    <option value="japan">Japan</option>
+    <option value="russia">Russia</option>
+
+    </option>
+
+
+  </select>
+</div>
+</div>
+<div class="row">
+<div class="col-25">
+  <label for="subject">Leave a Review About Your Experience</label>
+</div>
+<div class="col-75">
+  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+</div>
+</div>
+<div>Rate your vacation: </div>
+<div class="rate">
+  <input type="radio" id="star5" name="rate" value="5" />
+  <label for="star5" title="text">5 stars</label>
+  <input type="radio" id="star4" name="rate" value="4" />
+  <label for="star4" title="text">4 stars</label>
+  <input type="radio" id="star3" name="rate" value="3" />
+  <label for="star3" title="text">3 stars</label>
+  <input type="radio" id="star2" name="rate" value="2" />
+  <label for="star2" title="text">2 stars</label>
+  <input type="radio" id="star1" name="rate" value="1" />
+  <label for="star1" title="text">1 star</label>
+</div>
+
+</form>
+
+<button>Submit</button>
+
+<div id="results"></div>
+
+</body>
+</html>

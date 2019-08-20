@@ -1,0 +1,149 @@
+body {
+  background-color: #EAD7D9;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#main {
+  width: 60%;
+  margin: auto;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px -2px #2B1A20;
+  margin-bottom: 30px;
+}
+
+#header {
+  margin-top: 5px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 50px;
+  padding: 5px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 19px;
+  border: solid 3px #2B1A20;
+  border-radius: 5px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: -32px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+h3 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -2px;
+  margin-top: -2px;
+  color: white;
+  margin-bottom: -25px;
+}
+
+label {
+  width: 150px;
+  display: inline-block;
+}
+
+button {
+  background-color: #744346;
+  border: 2px black;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #2B1A20;
+  color: white;
+}
+
+#form1 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#sub_btn {
+  background-color: #744346;
+  color: white;
+  padding: 15px 32px;
+  display: inline-block;
+  font-size: 16px;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 50%;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s; */
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* */
+
+.dropdown-submenu  {
+  position: relative;
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.button {
+  margin-left: 253px;
+  margin-right: 253px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
+.btn {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+#testing {
+  padding: 10px;
+  width: 75%;
+  margin-top: 22px;
+  margin-bottom: 22px;
+  margin-left: 310px;
+  margin-right: 310px;
+  position: relative;
+}
+
+#testing button {
+  background-color: #744346;
+  border: 2px black;
+  color: white;
+  padding: 10px 24px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Clear floats (clearfix hack) */
+#testing:after {
+  content: "";
+  clear: both;
+  display: table;
+  color:white;
+}
+
+/* Add a background color on hover */
+#testing button:hover {
+  background-color: #2B1A20;
+}
