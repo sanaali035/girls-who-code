@@ -1,0 +1,456 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href= "https://newsapi.org/v2/top-headlines?country=us&apiKey=5d82c0d61fae485ebc2743cff3629ec0" type="text/css"
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Beth+Ellen|Rokkitt&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+<style> /*------------------------ css for 'back to top' button -------------------------*/
+
+#myBtn2 {
+  margin-left: 110px;
+  margin-right: 110px;
+  margin-top: 42px;
+}
+
+#myBtn3 {
+  margin-left: 110px;
+  margin-right: 110px;
+  margin-top: 65px;
+}
+
+#myBtn, #myBtn2, #myBtn3 {
+  text-align: center;
+  margin-left: 110px;
+  margin-right: 110px;
+  border: none;
+  outline: none;
+  background-color: #744346;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#myBtn:hover, #myBtn2:hover, #myBtn3:hover {
+  background-color: #2B1A20;
+}
+
+</style>
+
+<style> /*------------------------ css for navbar -------------------------*/
+.dropdown-submenu  {
+  position: relative;
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.button {
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
+.btn {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+#testing {
+  padding: 10px;
+  width: 75%;
+  margin-top: 22px;
+  margin-left: 310px;
+  margin-right: 310px;
+  position: relative;
+}
+
+#testing button {
+  background-color: #744346;
+  border: 2px black;
+  color: white;
+  padding: 10px 24px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Clear floats (clearfix hack) */
+#testing:after {
+  content: "";
+  clear: both;
+  display: table;
+  color:white;
+}
+
+/* Add a background color on hover */
+#testing button:hover {
+  background-color: #2B1A20;
+}
+</style>
+
+<style> /*-------------------- css for bottom columns --------------------*/
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  height: 400px;
+}
+
+.subhead {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 24px;
+}
+
+.subtext {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  line-height: 35px;
+  margin-top: 15px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+
+<style> /*-------------------- css for parallax scrolling --------------------*/
+.bg-img1 {
+  /* image used */
+  background-image: url("nyc.jpg");
+
+  /* setting specific height */
+  min-height: 420px;
+
+  /* making the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+  }
+}
+
+.bg-img2 {
+  background-image: url("tok.jpg");
+  min-height: 420px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+
+<style> /*------------------ css for spinning earth & homepg content -------------------- */
+body {
+  background-color: #EAD7D9;
+}
+
+#welcome {
+  font-family: 'Beth Ellen', cursive;
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 15px;
+  margin-top: -15px;
+}
+
+#space {
+  color: white;
+}
+
+#line {
+  font-family: serif;
+  text-align: center;
+  letter-spacing: -2px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+#better {
+  font-family: 'Rokkitt', serif;
+  text-align: center;
+  margin-bottom: 25px;
+  color: black;
+}
+
+.purpose {
+  margin-top: 100px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+}
+
+.purpose2 {
+  margin-top: 15px;
+  margin-right: 35px;
+  margin-bottom: 100px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.earth {
+  width: 350px;
+  height: 350px;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-right: 50px;
+  margin-bottom: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
+  float: left;
+}
+
+.earth:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: -20px -20px 50px 2px #000 inset;
+  border-radius: 50%;
+  float: left;
+}
+
+.earth > div {
+  width: 200%;
+  height: 100%;
+  position: absolute;
+  margin-top: 0px;
+  animation: spin 30s linear alternate infinite;
+  background: url(https://web.opendrive.com/api/v1/download/file.json/NTlfMTQ1MTkzNDhf?inline=1);
+  /*orginal image at https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Earthmap1000x500compac.jpg/640px-Earthmap1000x500compac.jpg */
+  background-size: cover;
+  float: left;
+}
+@keyframes spin {
+  to {
+    transform: translateX(-50%);
+  }
+</style>
+
+</head>
+
+<body>
+  <div class="container" id="testing">
+    <div class="dropdown">
+
+      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="btn">Countries
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li class="dropdown-submenu">
+        <a class="test" tabindex="-1" href="#">Australia<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a tabindex="-1" href="melbourne.html">Melbourne</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-submenu">
+        <a class="test" tabindex="-1" href="#">Canada<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a tabindex="-1" href="montreal.html">Montreal</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown-submenu">
+        <a class="test" tabindex="-1" href="#">Colombia<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a tabindex="-1" href="popayan.html">Popayan</a></li>
+        </ul>
+      </li>
+
+        <li class="dropdown-submenu">
+          <a class="test" tabindex="-1" href="#">England<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a tabindex="-1" href="london.html">London</a></li>
+            <li><a tabindex="-1" href="bath.html">Bath</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-submenu">
+          <a class="test" tabindex="-1" href="#">Japan<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a tabindex="-1" href="Tokyo.html#">Tokyo</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown-submenu">
+          <a class="test" tabindex="-1" href="#">Latvia<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a tabindex="-1" href="Riga.html">Riga</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-submenu">
+          <a class="test" tabindex="-1" href="#">Morocco<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a tabindex="-1" href="Marrakesh.html">Marrakesh</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-submenu">
+          <a class="test" tabindex="-1" href="#">The Netherlands<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a tabindex="-1" href="Amsterdam.html">Amsterdam</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown-submenu">
+          <a class="test" tabindex="-1" href="#">The Phillipines<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a tabindex="-1" href="Tagaytay.html">Tagaytay</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-submenu">
+          <a class="test" tabindex="-1" href="#">South Africa<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a tabindex="-1" href="pretoria.html">Pretoria</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown-submenu">
+          <a class="test" tabindex="-1" href="#">Thailand<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a tabindex="-1" href="bangkok.html">Bangkok</a></li>
+          </ul>
+        </li>
+
+          <li class="dropdown-submenu">
+            <a class="test" tabindex="-1" href="#">United States of America<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a tabindex="-1" href="LA.html">Los Angeles</a></li>
+              <li><a tabindex="-1" href="miami.html">Miami</a></li>
+              <li><a tabindex="-1" href="Honolulu.html">Honolulu</a></li>
+            </ul>
+          </li>
+
+
+      </ul>
+      <button><a class="button" tabindex="-1" href="quiz.html">Don't Know Where to Travel?</a></button>
+      <button><a class="button" tabindex="-1" href="review.html">Reviews</a></button>
+      <button><a class="button" tabindex="-1" href="aboutus.html">About</a></button>
+    </div>
+  </div>
+  <script>
+  $(document).ready(function(){
+    $('.dropdown-submenu a.test').on("click", function(e){
+      $(this).next('ul').toggle();
+      e.stopPropagation();
+      e.preventDefault();
+    });
+  });
+  </script>
+
+<div id="space">_        -</div>
+
+<div class="bg-img1">
+  <div class="caption">
+  <span class="border">A BETTER WAY TO TRAVEL</span>
+  </div>
+</div>
+
+<div class="earth">
+<div></div></div>
+<div class="world"></div>
+<strong><div class="purpose">
+  our purpose
+  </div></strong>
+<div class="purpose2">
+  Through world traveling, people get a chance to not only enjoy new sceneries, but also to gain more appreciation for both the people and the culture of the country they travel to. Traveling gives people the push they need in order to broaden their global perspective and become more culturally aware. Our website was created with this goal in mind. As you browse through this website, you will find not only mainstream travel destinations, but also smaller places with their own unique lifestyles and cultures.
+  </div>
+
+  <div class="bg-img2">
+    <div class="caption">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column" style="background-color:#75524C;">
+      <b><h2 class="subhead" style="color: white;">Countries</h2></b>
+      <p class="subtext" style="color: white;">Find a plethora of information about each country and city, ranging from tourist destinations to tips on how to stay safe as you travel!</p>
+      <button onclick="topFunction()" id="myBtn" title="Go to top">BACK TO TOP</button>
+    </div>
+    <div class="column" style="background-color:#DCD0D4;">
+      <b><h2 class="subhead" style="color: black;">Don't Know Where to Travel?</h2></b>
+      <p class="subtext" style="color: black;">If you're stuck on where to travel, take this quiz and find out which country is perfect for you!</p>
+      <button onclick="topFunction()" id="myBtn2" title="Go to top">BACK TO TOP</button>
+    </div>
+    <div class="column" style="background-color:#4B3F43;">
+      <b><h2 class="subhead" style="color: white;">Reviews</h2></b>
+      <p class="subtext" style="color: white;">Just got back from your vacation? Leave a review and let others know about your experience!</p>
+      <button onclick="topFunction()" id="myBtn3" title="Go to top">BACK TO TOP</button>
+    </div>
+    <div class="column" style="background-color:#D6A6A2;">
+      <b><h2 class="subhead" style="color: black;">About</h2></b>
+      <p class="subtext" style="color: black;">Contact and learn more about the developers behind this website!</p>
+      <button onclick="topFunction()" id="myBtn3" title="Go to top">BACK TO TOP</button>
+    </div>
+  </div>
+
+<script>
+  function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+</script>
+
+  </body>
+</html>

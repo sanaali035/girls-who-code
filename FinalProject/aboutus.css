@@ -1,0 +1,126 @@
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #EAD7D9;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Add some shadows to create a card effect */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Some left and right padding inside the container */
+.container {
+  padding: 0 16px;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+  .dropdown-submenu  {
+    position: relative;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .button {
+    margin-left: 253px;
+    margin-right: 253px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: white;
+  }
+
+  .btn {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+  }
+
+  #testing {
+    padding: 10px;
+    width: 75%;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    margin-left: 310px;
+    margin-right: 310px;
+    position: relative;
+  }
+
+  #testing button {
+    background-color: #744346;
+    border: 2px black;
+    color: white;
+    padding: 10px 24px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  /* Clear floats (clearfix hack) */
+  #testing:after {
+    content: "";
+    clear: both;
+    display: table;
+    color:white;
+  }
+
+  /* Add a background color on hover */
+  #testing button:hover {
+    background-color: #2B1A20;
+  }

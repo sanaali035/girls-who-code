@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<link rel = "stylesheet" type = "text/css" href = "aboutus.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+  <body>
+    <div class="container" id="testing">
+      <div class="dropdown">
+        <button><a class="button" tabindex="-1" href="final.html">Home</a></button>
+      </div>
+    </div>
+    <script>
+    $(document).ready(function(){
+      $('.dropdown-submenu a.test').on("click", function(e){
+        $(this).next('ul').toggle();
+        e.stopPropagation();
+        e.preventDefault();
+      });
+    });
+    </script>
+
+    <h3>About the developers</h3>
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <img src="sana.jpg" alt="me" style="width:100%">
+          <div class="container">
+            <h2>Sana</h2>
+            <p class="title">Web Developer</p>
+            <p>I am a rising junior at East Brunswick High School, and I have a growing interest in computer science.
+              While being mainly interested in law and public speaking, I've expanded my interest in IT at the Girls Who Code Summer Immersion Program in Johnson & Johnson.
+              It is hard to find places to travel and with this wabsite traveling can become easier informative and people can explore more places.
+            </p>
+            <p>Email: sanasali035@gmail.com </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <img src="jade.jpg" alt="me" style="width:100%">
+          <div class="container">
+            <h2>Jade</h2>
+            <p class="title">Web Developer</p>
+            <p>I am a rising junior at Monroe Township High School, I am interested in expanding my interests before I go to college. I want people
+            to be more culturally aware of the places they visit and with this website traveling can be easier.  </p>
+            <p>Email: jadeineantona@gmail.com </p>
+          </div>
+        </div>
+      </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="kelsey.jpg" alt="me" style="width:100%">
+        <div class="container">
+          <h2>Kelsey</h2>
+          <p class="title">Web Developer</p>
+          <p>I am a rising junior at New Brunswick Health Science and Technology High School, I am interested in engineering. I like traveling
+          to new places and with this website looking for a place to vist can be easier for you and you can learn about the different places itself.  </p>
+          <p>Email: tucan87j@gmail.com </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="saira.jpg" alt="me" style="width:100%">
+        <div class="container">
+          <h2>Saira</h2>
+          <p class="title">Web Developer</p>
+          <p>I am a rising senior at Hillsborough High School, I am interested in computer science and buisiness.
+          The Girls Who Code Summer Immersion Program has allowed me to explore subjects and career paths I had not considered before.
+          I am interested in traveling and exploring the world! I want to provide a site in which people can find unique places to travel to and
+        learn about. </p>
+          <p>Email: sairaehsan@gmail.com </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</body>
+</html>
