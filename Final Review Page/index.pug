@@ -1,0 +1,64 @@
+html
+  head
+    link(rel="stylesheet", href="/styles/additional.css")
+    link(href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet")
+    script(src='data.json')
+    title= title
+  body
+    h1= message
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  style.
+    * {
+    box-sizing: border-box;
+    }
+    input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    }
+    label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    }
+    input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;2
+    cursor: pointer;
+    float: right;
+    }
+    input[type=submit]:hover {
+    background-color: #45a049;
+    }
+center
+  h3
+    | &quot;Your story could be the key that unlocks someone else&apos;s prison. Do not be afraid to share it.&quot;
+p(style="text-align:right;")
+    |~Ely T.
+
+.container
+  form(action = '/save-stories' method = 'POST')
+    .row
+      .col-25
+        strong
+          label(for='uname') Username:
+      .col-75
+        textarea#uname(type='text' name='username' placeholder="Be creative...")
+    .row
+      .col-25
+        strong
+          label(for='subject') Subject:
+      .col-75
+        textarea#subject(name='subject' placeholder='Share your story..' style='height:200px')
+    .row
+      input(type='submit' value='submit')
+h4
+  |Comments:
+.container2
+  if stories
+      each val in stories
+        li= val.userName + ' : ' + val.subject
